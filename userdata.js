@@ -7,7 +7,7 @@ window.onload = function() {
 function DisplayData() {
   let count = 1;
   db.collection("Customers")
-    .orderBy("time&date")
+    .orderBy("time&date","desc")
     .get()
     .then((snapshot) => {
       snapshot.forEach((docs) => {
